@@ -26,9 +26,32 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Agency",
+    "name": "0xFLOW",
+    "url": "https://0xflow.dev",
+    "logo": "https://0xflow.dev/logo.png",
+    "description": "The premier publication and agency for the autonomous era.",
+    "founder": {
+      "@type": "Person",
+      "name": "Hrithik Nayak",
+      "jobTitle": "Editor-in-Chief & Lead Architect"
+    },
+    "sameAs": [
+      "https://github.com",
+      "https://twitter.com",
+      "https://linkedin.com"
+    ]
+  };
+
   return (
     <html lang="en" className="light">
       <body className={`${spaceMono.variable} ${playfair.variable} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <SmoothScrollProvider>
           {children}
         </SmoothScrollProvider>
