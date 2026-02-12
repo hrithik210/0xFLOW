@@ -1,0 +1,17 @@
+# 0xFLOW Agency
+
+> The Intelligence Age is Here.
+
+0xFLOW is a next-generation engineering agency bridging the gap between traditional software development and autonomous intelligence. We architect systems that think, learn, and evolve.
+
+## Key Resources
+
+- [Full Website Content](https://0xflow.dev/llms-full.txt): A complete markdown representation of our landing page, including our manifesto, capabilities, and systems.
+- [Services](https://0xflow.dev/services): Detailed breakdown of our engineering and AI capabilities.
+- [Contact](mailto:hello@0xflow.dev): Get in touch to start a project.
+
+## Core Capabilities
+
+- **Integration**: Injecting cognitive perception into existing stacks.
+- **Velocity**: Engineering high-velocity prototypes that feel finished from Day One.
+- **Automation**: Architecting self-healing workflows that operate 24/7.
