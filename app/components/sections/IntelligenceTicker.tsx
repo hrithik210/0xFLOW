@@ -12,7 +12,7 @@ export default function IntelligenceTicker() {
         <div className="bg-white text-black text-xs font-bold px-4 py-1 mr-4 uppercase tracking-widest whitespace-nowrap">
           Latest Intel
         </div>
-        <div className="flex whitespace-nowrap overflow-hidden w-full">
+        <div className="flex whitespace-nowrap overflow-hidden w-full" aria-hidden="true">
           <div className="flex animate-marquee">
             {duplicatedHeadlines.map((headline, index) => (
               <div key={index} className="flex items-center mx-8">

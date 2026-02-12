@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# LLM Optimization
+Allow: /llms-full.txt
+Allow: /llms.txt
+
+# Sitemap
+# Sitemap: https://0xflow.dev/sitemap.xml

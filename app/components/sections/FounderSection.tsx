@@ -35,6 +35,7 @@ export default function FounderSection() {
             <a
               key={link.label}
               href={link.href}
+              aria-label={`Visit our ${link.label} profile`}
               className="font-mono text-xs font-bold uppercase tracking-widest hover:bg-black hover:text-white px-2 py-1 transition-colors"
             >
               {link.label}
