@@ -1,49 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const projects = [
-  {
-    id: "0xanalytiq",
-    title: "0xANALYTIQ",
-    subtitle: "Investigative Report",
-    headline: "Inside the Swarm: How 0xAnalytiq Decodes Market Chaos",
-    description:
-      "An autonomous agent network providing real-time intelligence. We analyze the architecture behind the prediction engine.",
-    tags: ["OpenAI", "LangChain", "Vector DB"],
-    status: "LIVE",
-  },
-  {
-    id: "protocol-higher",
-    title: "PROTOCOL: HIGHER",
-    subtitle: "Human Interest",
-    headline: "Can an AI Coach Rewrite Your Psychology?",
-    description:
-      "A deep dive into the personalized behavioral systems adapting to user goals in real-time.",
-    tags: ["Claude", "Fine-tuning", "RAG"],
-    status: "BUILDING",
-  },
-  {
-    id: "solana-launchpad",
-    title: "SOLANA LAUNCHPAD",
-    subtitle: "Markets & Finance",
-    headline: "DeFi Infrastructure for the Next Bull Run",
-    description:
-      "Building the rails for token launches with governance baked in at the protocol level.",
-    tags: ["Solana", "Rust", "TypeScript"],
-    status: "SHIPPED",
-  },
-  {
-    id: "airnote-sync",
-    title: "AIRNOTE SYNC",
-    subtitle: "Technology",
-    headline: "The Race to Zero Latency in Edge Computing",
-    description:
-      "How Airnote Sync is achieving sub-millisecond data synchronization globally.",
-    tags: ["WebSockets", "Redis", "Edge"],
-    status: "ALPHA",
-  },
-];
+import { SYSTEMS_PROJECTS } from "@/app/data/content";
 
 export default function SystemsGrid() {
   return (
@@ -57,7 +15,7 @@ export default function SystemsGrid() {
         </div>
 
         <div className="grid grid-cols-1 gap-16">
-          {projects.map((project, index) => (
+          {SYSTEMS_PROJECTS.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 10 }}

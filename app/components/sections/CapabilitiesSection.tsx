@@ -1,24 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const capabilities = [
-  {
-    title: "On Integration",
-    headline: "Bridging the Cognitive Gap",
-    description: "Legacy software is static. We inject cognitive perception into existing stacks, transforming dead data into actionable intelligence.",
-  },
-  {
-    title: "On Velocity",
-    headline: "The MVP is Dead; Long Live the MVP",
-    description: "Speed is the only moat. We don't just build; we engineer high-velocity prototypes that feel entirely finished from Day One.",
-  },
-  {
-    title: "On Automation",
-    headline: "Removing the Human Bottleneck",
-    description: "Operational drag kills companies. We architect self-healing workflows that operate 24/7, scaling infinitely without friction.",
-  },
-];
+import { CAPABILITIES, COMPANY_NAME } from "@/app/data/content";
 
 export default function CapabilitiesSection() {
   return (
@@ -32,7 +15,7 @@ export default function CapabilitiesSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {capabilities.map((cap, index) => (
+          {CAPABILITIES.map((cap, index) => (
             <motion.div
               key={cap.title}
               initial={{ opacity: 0, y: 20 }}
@@ -48,7 +31,7 @@ export default function CapabilitiesSection() {
                 {cap.headline}
               </h3>
               <p className="font-serif text-gray-700 leading-relaxed text-justify">
-                <span className="font-bold mr-1 text-black">0xFLOW —</span>
+                <span className="font-bold mr-1 text-black">{COMPANY_NAME} —</span>
                 {cap.description}
               </p>
             </motion.div>

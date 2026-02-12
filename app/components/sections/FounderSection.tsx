@@ -2,12 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-
-const socialLinks = [
-  { label: "Github", href: "https://github.com" },
-  { label: "Twitter", href: "https://twitter.com" },
-  { label: "LinkedIn", href: "https://linkedin.com" },
-];
+import { FOUNDER_CONTENT } from "@/app/data/content";
 
 export default function FounderSection() {
   return (
@@ -17,7 +12,7 @@ export default function FounderSection() {
           <div className="relative w-32 h-32 md:w-40 md:h-40 grayscale border-2 border-black rounded-full overflow-hidden">
              <Image
                 src="/placeholder-founder.jpg"
-                alt="Hrithik Nayak"
+                alt={FOUNDER_CONTENT.name}
                 fill
                 className="object-cover"
               />
@@ -25,18 +20,18 @@ export default function FounderSection() {
         </div>
 
         <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">
-          Hrithik Nayak
+          {FOUNDER_CONTENT.name}
         </h2>
         <span className="font-mono text-xs uppercase tracking-widest text-gray-500 mb-8 block">
-          Editor-in-Chief & Lead Architect
+          {FOUNDER_CONTENT.title}
         </span>
 
         <p className="font-serif text-xl md:text-2xl leading-relaxed text-gray-800 mb-12 italic">
-          "The future belongs to the autonomous. We are here to document the transition and build the infrastructure that powers it."
+          "{FOUNDER_CONTENT.quote}"
         </p>
 
         <div className="flex justify-center gap-8 mb-12">
-          {socialLinks.map((link) => (
+          {FOUNDER_CONTENT.socials.map((link) => (
             <a
               key={link.label}
               href={link.href}
@@ -49,7 +44,7 @@ export default function FounderSection() {
 
         <div className="border-t border-black pt-8">
            <p className="font-mono text-xs text-gray-400 uppercase">
-             San Francisco &middot; Bengaluru &middot; New York
+             {FOUNDER_CONTENT.location}
            </p>
         </div>
       </div>

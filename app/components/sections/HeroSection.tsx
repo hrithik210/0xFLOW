@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { COMPANY_NAME, HERO_CONTENT } from "@/app/data/content";
 
 export default function HeroSection() {
   const currentDate = new Date().toLocaleDateString("en-US", {
@@ -15,9 +16,9 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Masthead Meta */}
         <div className="flex justify-between items-center border-b border-black pb-4 mb-8 font-mono text-xs uppercase tracking-widest">
-          <span>Vol. 1, Issue 01</span>
+          <span>{HERO_CONTENT.masthead.issue}</span>
           <span>{currentDate}</span>
-          <span>Silicon Valley &middot; Global</span>
+          <span>{HERO_CONTENT.masthead.location}</span>
         </div>
 
         {/* Masthead Title */}
@@ -28,11 +29,11 @@ export default function HeroSection() {
             transition={{ duration: 0.8 }}
             className="text-[12vw] leading-[0.8] font-black font-serif tracking-tighter text-black mb-4"
           >
-            0xFLOW
+            {COMPANY_NAME}
           </motion.h1>
           <div className="border-t border-b border-black py-2 mb-12">
             <p className="text-center font-serif italic text-lg md:text-xl">
-              "The Intelligence Age is Here."
+              "{HERO_CONTENT.masthead.quote}"
             </p>
           </div>
         </div>
@@ -47,28 +48,24 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <span className="font-mono text-xs bg-black text-white px-2 py-1 mb-4 inline-block">
-                LEAD STORY
+                {HERO_CONTENT.leadStory.label}
               </span>
               <h2 className="text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight">
-                Engineering Velocity in the Age of Autonomy
+                {HERO_CONTENT.leadStory.title}
               </h2>
               <div className="flex gap-4 font-mono text-xs text-gray-500 mb-8 items-center">
-                <span className="uppercase tracking-widest">By Hrithik Nayak</span>
+                <span className="uppercase tracking-widest">By {HERO_CONTENT.leadStory.author}</span>
                 <span className="w-12 h-px bg-gray-300"></span>
-                <span>5 Min Read</span>
+                <span>{HERO_CONTENT.leadStory.readTime}</span>
               </div>
               
               <div className="prose prose-lg font-serif text-gray-700 leading-relaxed md:columns-2 gap-8">
                 <p className="first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:mt-[-10px]">
-                  We are witnessing a fundamental shift in how software is conceived and constructed.
-                  Traditional development cycles are obsolete. The new standard is fluid, adaptive, and
-                  powered by autonomous intelligence.
+                  {HERO_CONTENT.leadStory.content[0]}
                 </p>
-                <p>
-                  0xFLOW exists to bridge this gap. We don't just write code; we architect systems
-                  that think, learn, and evolve. From rapid MVP deployment to full-scale AI agent swarms,
-                  our mission is to deliver engineering velocity that feels like magic.
-                </p>
+                {HERO_CONTENT.leadStory.content.slice(1).map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
               </div>
 
               <div className="mt-8 pt-8 border-t border-gray-200">
@@ -83,32 +80,24 @@ export default function HeroSection() {
           <div className="md:col-span-4 flex flex-col justify-between">
             <div className="mb-12">
               <h3 className="font-sans font-bold text-sm uppercase tracking-widest border-b-2 border-black pb-2 mb-4">
-                In This Issue
+                {HERO_CONTENT.sidebar.title}
               </h3>
               <ul className="space-y-6">
-                <li className="group cursor-pointer">
-                  <span className="text-gray-400 font-mono text-xs block mb-1">P. 02</span>
-                  <h4 className="font-serif text-xl font-bold group-hover:underline">The Death of Static Code</h4>
-                  <p className="text-sm text-gray-500 mt-1">Why dynamic systems are taking over.</p>
-                </li>
-                <li className="group cursor-pointer">
-                  <span className="text-gray-400 font-mono text-xs block mb-1">P. 05</span>
-                  <h4 className="font-serif text-xl font-bold group-hover:underline">Agent Swarms 101</h4>
-                  <p className="text-sm text-gray-500 mt-1">Orchestrating intelligence at scale.</p>
-                </li>
-                <li className="group cursor-pointer">
-                  <span className="text-gray-400 font-mono text-xs block mb-1">P. 08</span>
-                  <h4 className="font-serif text-xl font-bold group-hover:underline">The 0xFLOW Manifesto</h4>
-                  <p className="text-sm text-gray-500 mt-1">Our principles for building the future.</p>
-                </li>
+                {HERO_CONTENT.sidebar.items.map((item, index) => (
+                  <li key={index} className="group cursor-pointer">
+                    <span className="text-gray-400 font-mono text-xs block mb-1">{item.page}</span>
+                    <h4 className="font-serif text-xl font-bold group-hover:underline">{item.title}</h4>
+                    <p className="text-sm text-gray-500 mt-1">{item.subtitle}</p>
+                  </li>
+                ))}
               </ul>
             </div>
 
             <div className="bg-gray-100 p-6 text-center">
-              <h4 className="font-serif text-2xl font-bold mb-2">Start a Project</h4>
-              <p className="text-sm text-gray-600 mb-4">Ready to engineer the impossible?</p>
-              <a href="mailto:hello@0xflow.dev" className="inline-block border border-black px-6 py-2 text-sm font-bold hover:bg-black hover:text-white transition-colors uppercase tracking-widest">
-                Contact Office
+              <h4 className="font-serif text-2xl font-bold mb-2">{HERO_CONTENT.cta.title}</h4>
+              <p className="text-sm text-gray-600 mb-4">{HERO_CONTENT.cta.subtitle}</p>
+              <a href={HERO_CONTENT.cta.link} className="inline-block border border-black px-6 py-2 text-sm font-bold hover:bg-black hover:text-white transition-colors uppercase tracking-widest">
+                {HERO_CONTENT.cta.button}
               </a>
             </div>
           </div>

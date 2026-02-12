@@ -1,18 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const headlines = [
-  "BREAKING: AI AGENTS NOW DEPLOYING TO PRODUCTION",
-  "MARKET UPDATE: VELOCITY IS THE NEW CURRENCY",
-  "INSIGHT: AUTOMATION REDUCES OPERATIONAL DRAG BY 400%",
-  "OPINION: STATIC CODE IS DEAD; LONG LIVE ADAPTIVE SYSTEMS",
-  "0xFLOW DEPLOYS NEW SWARM ARCHITECTURE",
-  "ANALYSIS: THE FUTURE OF ENGINEERING IS AUTONOMOUS",
-];
+import { TICKER_HEADLINES } from "@/app/data/content";
 
 export default function IntelligenceTicker() {
-  const duplicatedHeadlines = [...headlines, ...headlines];
+  const duplicatedHeadlines = [...TICKER_HEADLINES, ...TICKER_HEADLINES];
 
   return (
     <section className="py-3 border-b border-black bg-black text-white overflow-hidden relative z-20">
