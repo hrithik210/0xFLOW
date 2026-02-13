@@ -2,14 +2,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fcfcfc;
-  /* Off-white paper color */
-  --foreground: #1a1a1a;
-  /* Soft black ink */
+  --background: #fdfbf7;
+  /* Warmer paper color */
+  --foreground: #111111;
+  /* Deep black ink */
   --accent: #f0f0f0;
-  --border: #d4d4d4;
-  /* Darker border for newspaper feel */
-  --ink: #111111;
+  --border: #222222;
+  /* Stronger border for newspaper feel */
+  --ink: #000000;
 }
 
 @theme inline {
@@ -30,6 +30,8 @@ body {
   font-family: "Satoshi", sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  /* Improved readability */
 }
 
 h1,
@@ -40,6 +42,13 @@ h5,
 h6 {
   font-family: var(--font-serif);
   color: var(--ink);
+  line-height: 1.1;
+  /* Tighter headings */
+  letter-spacing: -0.02em;
+}
+
+p {
+  margin-bottom: 1.5em;
 }
 
 html.lenis,
@@ -71,23 +80,25 @@ html.lenis body {
 /* Selection styling */
 ::selection {
   background: var(--ink);
-  color: #ffffff;
+  color: #fdfbf7;
 }
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
   background: var(--background);
+  border-left: 1px solid var(--border);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #d4d4d4;
-  border-radius: 0;
+  background: var(--ink);
+  border: 2px solid var(--background);
+  /* Creates a floating thumb effect */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--ink);
+  background: #333;
 }

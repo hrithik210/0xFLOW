@@ -14,7 +14,7 @@ export default function CapabilitiesSection() {
           <span className="flex-grow ml-4 h-px bg-gray-300"></span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 border-l border-gray-200 pl-8">
           {CAPABILITIES.map((cap, index) => (
             <motion.div
               key={cap.title}
