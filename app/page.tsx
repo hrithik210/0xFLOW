@@ -9,17 +9,17 @@ export default function Home() {
   return (
     <>
       <Navigation />
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen">
         <HeroSection />
         <IntelligenceTicker />
         <CapabilitiesSection />
         <SystemsGrid />
         <FounderSection />
 
-        <footer className="py-12 px-6 border-t border-gray-200 bg-gray-50">
+        <footer className="py-12 px-6 border-t glass-panel" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="text-sm text-gray-600">
-              <span className="font-bold text-black">0xFLOW</span> © {new Date().getFullYear()}
+            <div className="text-sm text-gray-400">
+              <span className="font-bold text-white">0xFLOW</span> © {new Date().getFullYear()}
             </div>
             <div className="text-sm text-gray-500">
               Fluid Intelligence. Concrete Results.
