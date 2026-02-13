@@ -42,17 +42,6 @@ export default function FounderSection() {
             </a>
           ))}
         </motion.div>
-
-        {/* Location */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-sm text-gray-500"
-        >
-          {FOUNDER_CONTENT.location}
-        </motion.div>
       </div>
     </section>
   );

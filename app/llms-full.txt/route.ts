@@ -53,7 +53,6 @@ ${TICKER_HEADLINES.map(headline => `- ${headline}`).join("\n")}
 ## Founder: ${FOUNDER_CONTENT.name}
 ${FOUNDER_CONTENT.title}
 "${FOUNDER_CONTENT.quote}"
-Location: ${FOUNDER_CONTENT.location}
 
 ### Connect
 ${FOUNDER_CONTENT.socials.map(social => `- [${social.label}](${social.href})`).join("\n")}
