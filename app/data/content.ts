@@ -143,7 +143,6 @@ export const FOUNDER_CONTENT = {
   name: "Hrithik Nayak",
   title: "Lead Architect & Founder",
   quote: "We are entering the age of fluid software. The code we write today must be able to think for itself tomorrow.",
-  location: "Global Distributed HQ",
   socials: [
     { label: "GitHub", href: "https://github.com/hrithik210" },
     { label: "Twitter/X", href: "https://twitter.com" },
