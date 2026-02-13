@@ -3,13 +3,6 @@
 import { motion } from "framer-motion";
 import { CAPABILITIES } from "@/app/data/content";
 
-const ICONS = {
-  "MVP Development": "⚡",
-  "Intelligent Automations": "🔄",
-  "Full-Stack Applications": "🌐",
-  "AI & Agentic Solutions": "🤖"
-};
-
 export default function CapabilitiesSection() {
   return (
     <section id="services" className="py-24 px-6 bg-gray-50">
@@ -40,11 +33,6 @@ export default function CapabilitiesSection() {
               className="group bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-black transition-all cursor-pointer hover:shadow-xl"
             >
               <div className="flex items-start gap-6">
-                {/* Icon */}
-                <div className="text-4xl flex-shrink-0">
-                  {ICONS[service.headline as keyof typeof ICONS] || "●"}
-                </div>
-
                 {/* Content */}
                 <div className="flex-1">
                   <div className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
