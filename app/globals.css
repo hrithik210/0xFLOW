@@ -1,37 +1,52 @@
-@import url("https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
 @import "tailwindcss";
 
 :root {
-  --background: #fdfbf7;
-  /* Warmer paper color */
-  --foreground: #111111;
-  /* Deep black ink */
-  --accent: #f0f0f0;
-  --border: #222222;
-  /* Stronger border for newspaper feel */
-  --ink: #000000;
+  --background: #FFFFFF;
+  --foreground: #000000;
+  --gray-50: #FAFAFA;
+  --gray-100: #F5F5F5;
+  --gray-200: #EEEEEE;
+  --gray-300: #E0E0E0;
+  --gray-400: #BDBDBD;
+  --gray-500: #9E9E9E;
+  --gray-600: #757575;
+  --gray-700: #616161;
+  --gray-800: #424242;
+  --gray-900: #212121;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-accent: var(--accent);
-  --color-border: var(--border);
-  --color-ink: var(--ink);
+  --color-gray-50: var(--gray-50);
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-300: var(--gray-300);
+  --color-gray-400: var(--gray-400);
+  --color-gray-500: var(--gray-500);
+  --color-gray-600: var(--gray-600);
+  --color-gray-700: var(--gray-700);
+  --color-gray-800: var(--gray-800);
+  --color-gray-900: var(--gray-900);
 
-  --font-sans: "Satoshi", sans-serif;
-  --font-serif: var(--font-serif), "Playfair Display", serif;
-  --font-mono: var(--font-space-mono);
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Satoshi", sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
-  /* Improved readability */
 }
 
 h1,
@@ -40,15 +55,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-serif);
-  color: var(--ink);
-  line-height: 1.1;
-  /* Tighter headings */
-  letter-spacing: -0.02em;
+  font-family: "Inter", sans-serif;
+  color: var(--foreground);
+  line-height: 1.2;
+  font-weight: 900;
+  letter-spacing: -0.03em;
 }
 
 p {
-  margin-bottom: 1.5em;
+  line-height: 1.7;
 }
 
 html.lenis,
@@ -72,33 +87,36 @@ html.lenis body {
   pointer-events: none;
 }
 
-/* Typography Utilities */
-.text-balance {
-  text-wrap: balance;
-}
-
 /* Selection styling */
 ::selection {
-  background: var(--ink);
-  color: #fdfbf7;
+  background: var(--foreground);
+  color: var(--background);
 }
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
   background: var(--background);
-  border-left: 1px solid var(--border);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--ink);
-  border: 2px solid var(--background);
-  /* Creates a floating thumb effect */
+  background: var(--gray-400);
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #333;
+  background: var(--gray-600);
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Remove transition from motion elements */
+[class*="motion"] {
+  transition: none;
 }

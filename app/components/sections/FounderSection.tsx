@@ -1,53 +1,58 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { FOUNDER_CONTENT } from "@/app/data/content";
 
 export default function FounderSection() {
   return (
-    <section id="founder" className="py-24 px-6 bg-[#f5f5f5]">
+    <section id="founder" className="py-24 px-6 bg-gray-50">
       <div className="max-w-4xl mx-auto text-center">
-        <div className="mb-8 flex justify-center">
-          <div className="relative w-32 h-32 md:w-40 md:h-40 grayscale border-2 border-black rounded-full overflow-hidden">
-             <Image
-                src="/placeholder-founder.jpg"
-                alt={FOUNDER_CONTENT.name}
-                fill
-                className="object-cover"
-              />
-          </div>
-        </div>
+        {/* Quote */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-12"
+        >
+          <p className="text-2xl md:text-3xl font-bold leading-relaxed mb-8">
+            "{FOUNDER_CONTENT.quote}"
+          </p>
+          <div className="text-lg font-semibold">{FOUNDER_CONTENT.name}</div>
+          <div className="text-gray-600">{FOUNDER_CONTENT.title}</div>
+        </motion.div>
 
-        <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">
-          {FOUNDER_CONTENT.name}
-        </h2>
-        <span className="font-mono text-xs uppercase tracking-widest text-gray-500 mb-8 block">
-          {FOUNDER_CONTENT.title}
-        </span>
-
-        <p className="font-serif text-xl md:text-2xl leading-relaxed text-gray-800 mb-12 italic">
-          "{FOUNDER_CONTENT.quote}"
-        </p>
-
-        <div className="flex justify-center gap-8 mb-12">
+        {/* Social Links */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex justify-center gap-6 mb-8"
+        >
           {FOUNDER_CONTENT.socials.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              aria-label={`Visit our ${link.label} profile`}
-              className="font-mono text-xs font-bold uppercase tracking-widest hover:bg-black hover:text-white px-2 py-1 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 border-2 border-gray-300 rounded-full font-semibold hover:border-black hover:bg-black hover:text-white transition-all"
             >
               {link.label}
             </a>
           ))}
-        </div>
+        </motion.div>
 
-        <div className="border-t border-black pt-8">
-           <p className="font-mono text-xs text-gray-400 uppercase">
-             {FOUNDER_CONTENT.location}
-           </p>
-        </div>
+        {/* Location */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-sm text-gray-500"
+        >
+          {FOUNDER_CONTENT.location}
+        </motion.div>
       </div>
     </section>
   );
