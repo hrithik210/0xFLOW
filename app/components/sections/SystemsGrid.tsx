@@ -5,15 +5,15 @@ import { SYSTEMS_PROJECTS } from "@/app/data/content";
 import Image from "next/image";
 
 const STATUS_STYLES = {
-  LIVE: "bg-green-100 text-green-700 border-green-200",
-  BETA: "bg-blue-100 text-blue-700 border-blue-200",
-  SHIPPED: "bg-purple-100 text-purple-700 border-purple-200",
-  ALPHA: "bg-orange-100 text-orange-700 border-orange-200",
+  LIVE: "bg-green-500/10 text-green-400 border-green-500/20",
+  BETA: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+  SHIPPED: "bg-purple-500/10 text-purple-400 border-purple-500/20",
+  ALPHA: "bg-orange-500/10 text-orange-400 border-orange-500/20",
 };
 
 export default function SystemsGrid() {
   return (
-    <section id="projects" className="py-24 px-6">
+    <section id="projects" className="py-24 px-6 relative">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <motion.div
@@ -23,8 +23,8 @@ export default function SystemsGrid() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-black mb-4">Recent Work</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-black mb-4 text-white">Recent Work</h2>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Production systems serving real users
           </p>
         </motion.div>
@@ -41,17 +41,18 @@ export default function SystemsGrid() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:border-black transition-all cursor-pointer hover:shadow-lg"
+              className="group glass-card rounded-2xl overflow-hidden cursor-pointer"
             >
               {/* Thumbnail */}
               {project.thumbnail && (
-                <div className="relative w-full h-48 bg-gray-100 overflow-hidden">
+                <div className="relative w-full h-48 bg-gray-900/50 overflow-hidden border-b" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
                   <Image
                     src={project.thumbnail}
                     alt={project.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                 </div>
               )}
 
@@ -59,10 +60,10 @@ export default function SystemsGrid() {
                 {/* Project Header */}
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <h3 className="text-2xl font-bold mb-2 group-hover:text-gray-700 transition-colors">
+                    <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-blue-400 transition-colors">
                       {project.title}
                     </h3>
-                    <div className="text-sm text-gray-500 font-medium">
+                    <div className="text-sm text-gray-400 font-medium">
                       {project.subtitle}
                     </div>
                   </div>
@@ -76,7 +77,7 @@ export default function SystemsGrid() {
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-600 leading-relaxed mb-6">
+                <p className="text-gray-400 leading-relaxed mb-6">
                   {project.description}
                 </p>
 
@@ -85,7 +86,7 @@ export default function SystemsGrid() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium"
+                      className="px-3 py-1 bg-white/5 text-gray-300 border border-white/10 rounded-full text-xs font-medium"
                     >
                       {tag}
                     </span>
@@ -93,8 +94,8 @@ export default function SystemsGrid() {
                 </div>
 
                 {/* Links */}
-                <div className="flex items-center gap-4 text-sm font-semibold">
-                  <span className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="flex items-center gap-4 text-sm font-semibold text-blue-400">
+                  <span className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all transform translate-x-[-10px] group-hover:translate-x-0">
                     <span>View Live Demo</span>
                     <svg
                       className="w-4 h-4"

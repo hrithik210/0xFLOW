@@ -27,20 +27,22 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20">
-      <div className="max-w-6xl mx-auto text-center">
+    <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 relative">
+      <div className="max-w-6xl mx-auto text-center z-10">
         {/* Animated Headline */}
         <div className="mb-8 h-[200px] md:h-[240px] flex items-center justify-center">
           <AnimatePresence mode="wait">
             <motion.h1
               key={currentIndex}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -50 }}
+              initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              exit={{ opacity: 0, y: -50, filter: "blur(10px)" }}
               transition={{ duration: 0.6, ease: "easeInOut" }}
-              className="text-6xl md:text-8xl lg:text-9xl font-black leading-tight tracking-tight"
+              className="text-6xl md:text-8xl lg:text-9xl font-black leading-tight tracking-tight text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]"
             >
-              {HEADERS[currentIndex]}
+              <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50">
+                {HEADERS[currentIndex]}
+              </span>
             </motion.h1>
           </AnimatePresence>
         </div>
@@ -54,7 +56,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.6, ease: "easeInOut", delay: 0.2 }}
-              className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto font-medium leading-relaxed"
+              className="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto font-medium leading-relaxed"
             >
               {DESCRIPTIONS[currentIndex]}
             </motion.p>
@@ -70,13 +72,13 @@ export default function HeroSection() {
         >
           <a
             href="mailto:hello@0xflow.dev"
-            className="px-8 py-4 bg-black text-white text-lg font-semibold rounded-full hover:bg-gray-800 transition-all hover:scale-105"
+            className="px-8 py-4 bg-white text-black text-lg font-semibold rounded-full hover:bg-gray-200 transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
           >
             Start a Project
           </a>
           <a
             href="#projects"
-            className="px-8 py-4 border-2 border-black text-black text-lg font-semibold rounded-full hover:bg-gray-50 transition-all"
+            className="px-8 py-4 border border-white/20 text-white text-lg font-semibold rounded-full hover:bg-white/5 transition-all backdrop-blur-sm"
           >
             View Work
           </a>
@@ -90,18 +92,18 @@ export default function HeroSection() {
           className="mt-20 flex flex-wrap items-center justify-center gap-8 md:gap-12 text-sm text-gray-500"
         >
           <div className="text-center">
-            <div className="text-2xl font-bold text-black">6+</div>
-            <div>Production systems</div>
+            <div className="text-2xl font-bold text-white mb-1">6+</div>
+            <div className="text-gray-400">Production systems</div>
           </div>
-          <div className="w-px h-8 bg-gray-200"></div>
+          <div className="w-px h-8 bg-white/10"></div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-black">Fast</div>
-            <div>Time to market</div>
+            <div className="text-2xl font-bold text-white mb-1">Fast</div>
+            <div className="text-gray-400">Time to market</div>
           </div>
-          <div className="w-px h-8 bg-gray-200"></div>
+          <div className="w-px h-8 bg-white/10"></div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-black">Modern</div>
-            <div>Tech stack</div>
+            <div className="text-2xl font-bold text-white mb-1">Modern</div>
+            <div className="text-gray-400">Tech stack</div>
           </div>
         </motion.div>
       </div>

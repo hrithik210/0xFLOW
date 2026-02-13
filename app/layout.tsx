@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Manrope, Outfit } from "next/font/google";
 import "./globals.css";
 import SmoothScrollProvider from "./providers/SmoothScrollProvider";
 
-const inter = Inter({
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-manrope",
+  display: "swap",
+});
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
   display: "swap",
 });
 
@@ -21,8 +27,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="antialiased bg-white text-black font-sans">
+    <html lang="en" className={`${manrope.variable} ${outfit.variable}`}>
+      <body className="antialiased font-sans relative">
+        <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+            <div className="ambient-glow" style={{ top: '-10%', left: '-10%', opacity: 0.4 }}></div>
+            <div className="ambient-glow" style={{ bottom: '-10%', right: '-10%', opacity: 0.3, background: 'radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(5, 5, 5, 0) 70%)' }}></div>
+        </div>
         <SmoothScrollProvider>
           {children}
         </SmoothScrollProvider>
