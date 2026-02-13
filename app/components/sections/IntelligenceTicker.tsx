@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { TICKER_HEADLINES } from "@/app/data/content";
 
 export default function IntelligenceTicker() {
