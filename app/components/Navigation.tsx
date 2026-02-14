@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -29,7 +30,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="text-2xl font-black tracking-tight text-white">
-            0xFLOW
+            <Image src="/logo.png" alt="Logo" width={100} height={100} />
           </Link>
 
           {/* Nav Links */}
