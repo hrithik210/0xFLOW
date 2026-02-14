@@ -16,9 +16,12 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "0xFLOW | Fluid Intelligence",
+  title: "0xFLOW",
   description: "Engineering velocity for the next generation of systems. MVP development, automations, and AI solutions.",
   keywords: ["AI agency", "Intelligence", "Software Development", "MVP", "0xFLOW"],
+  openGraph: {
+    images: "/logo.png",
+  },
 };
 
 export default function RootLayout({
