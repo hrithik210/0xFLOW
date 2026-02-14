@@ -30,7 +30,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="text-2xl font-black tracking-tight text-white">
-            <Image src="/logo.png" alt="Logo" width={100} height={100} />
+            <Image src="/logo1.png" alt="Logo" width={100} height={100} />
           </Link>
 
           {/* Nav Links */}
