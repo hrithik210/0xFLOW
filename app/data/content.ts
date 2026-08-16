@@ -5,13 +5,13 @@ export const SITE = {
   url: "https://oxflow.studio",
   email: "hrithik@oxflow.studio",
   // TODO: replace with the real Cal.com booking URL
-  calLink: "https://cal.com/CHANGEME",
-  ctaLabel: "Book a fit call",
+  calLink: "https://cal.com/hrithik-qkktvp/20min",
+  ctaLabel: "Book a call",
   socials: [
     { label: "GitHub", href: "https://github.com/hrithik210" },
     // TODO: replace with real profile URLs
-    { label: "LinkedIn", href: "https://linkedin.com/in/CHANGEME" },
-    { label: "X", href: "https://x.com/CHANGEME" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/hrithik-b2a622259/" },
+    { label: "X", href: "https://x.com/hrithik_018" },
   ],
 };
 
@@ -79,6 +79,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     slug: "creator-os",
     title: "Creator OS",
     tagline: "The financial back office for creators, run over text message.",
+    liveUrl:"https://creatorconcierge.cc/",
     summary:
       "As founding engineer for Everbloom, I took Creator OS from zero to production: an AI system that reads invoices, answers over SMS, and moves real money once the creator confirms.",
     // TODO: add screenshot at public/work/creator-os.png, then set thumbnail: "/work/creator-os.png"

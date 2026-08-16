@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { CASE_STUDIES } from "@/app/data/content";
@@ -35,8 +37,36 @@ export default function FeaturedWorkSection() {
               )}
               <div className="p-8 flex flex-col gap-4 flex-1">
                 <div className="flex items-baseline justify-between gap-4">
-                  <h3 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors flex items-center gap-2">
                     {cs.title}
+                    {cs.liveUrl && (
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          window.open(cs.liveUrl, "_blank", "noopener,noreferrer");
+                        }}
+                        aria-label={`Open ${cs.title} live site`}
+                        className="text-gray-500 hover:text-blue-400 transition-colors"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                          <polyline points="15 3 21 3 21 9" />
+                          <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                      </button>
+                    )}
                   </h3>
                   <span className="text-xs text-gray-500 whitespace-nowrap">{cs.status}</span>
                 </div>
