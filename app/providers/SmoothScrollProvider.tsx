@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, ReactNode } from "react";
+import { MotionConfig } from "framer-motion";
 import Lenis from "lenis";
 
 interface SmoothScrollProviderProps {
@@ -32,5 +33,5 @@ export default function SmoothScrollProvider({ children }: SmoothScrollProviderP
     };
   }, []);
 
-  return <>{children}</>;
+  return <MotionConfig reducedMotion="user">{children}</MotionConfig>;
 }
