@@ -1,151 +1,173 @@
 export const COMPANY_NAME = "0xFLOW";
 
-export const HERO_CONTENT = {
-  masthead: {
-    issue: "Vol. 2, Issue 01",
-    location: "San Francisco · Global",
-    quote: "Fluid Intelligence. Concrete Results."
-  },
-  leadStory: {
-    label: "COVER STORY",
-    title: "The End of Stagnant Software",
-    author: "Hrithik Nayak",
-    readTime: "3 Min Read",
-    content: [
-      "In a world drowning in static code, adaptability is the only currency that matters. We don't just build software; we engineer fluid systems that evolve with your business.",
-      "From rapid MVP deployment to autonomous agent swarms, 0xFLOW delivers engineering velocity that feels like magic. We bridge the gap between human creativity and machine intelligence."
-    ]
-  },
-  sidebar: {
-    title: "Latest Dispatches",
-    items: [
-      { page: "P. 02", title: "MVP in Weeks, Not Months", subtitle: "Shipping at the speed of thought." },
-      { page: "P. 04", title: "The Automation Advantage", subtitle: "Scaling without the headcount." },
-      { page: "P. 07", title: "Full-Stack Mastery", subtitle: "Architectures that handle global scale." }
-    ]
-  },
-  cta: {
-    title: "Ready to Flow?",
-    subtitle: "Let's build something impossible.",
-    button: "Initiate Protocol",
-    link: "mailto:hello@0xflow.dev"
-  }
-};
-
-export const CAPABILITIES = [
-  {
-    title: "Rapid Prototyping",
-    headline: "MVP Development",
-    description: "Launch your idea before the market shifts. We build robust, scalable MVPs in weeks, not months. Zero technical debt, maximum impact.",
-  },
-  {
-    title: "Operational Efficiency",
-    headline: "Intelligent Automations",
-    description: "Stop trading time for money. We deploy self-healing workflows that operate 24/7, eliminating bottlenecks and scaling infinitely.",
-  },
-  {
-    title: "Global Scale",
-    headline: "Full-Stack Applications",
-    description: "Robust, secure, and lightning-fast. We engineer complex web applications using modern architectures designed for millions of users.",
-  },
-  {
-    title: "Future Proofing",
-    headline: "AI & Agentic Solutions",
-    description: "Go beyond chatbots. We integrate deep learning and autonomous agents to resolve complex problems and generate real-time value.",
-  }
-];
-
-export const SYSTEMS_PROJECTS = [
-  {
-    id: "analytiq",
-    title: "AnalytIQ",
-    subtitle: "AI Analytics Platform",
-    headline: "Automated AI analyst team for data insights",
-    description: "An automated AI analyst team that analyzes, visualizes, and narrates insights from your data in minutes. Built with multi-agent orchestration.",
-    tags: ["Python", "FastAPI", "AutoGen", "Supabase", "React"],
-    status: "LIVE",
-    github: "https://github.com/hrithik210/AnalytIQ",
-    demo: "https://analytiq-seven.vercel.app/",
-    thumbnail: "/analytiq.png"
-  },
-  {
-    id: "higherme",
-    title: "HigherMe",
-    subtitle: "Personal Development",
-    headline: "Agentic system for daily progress tracking",
-    description: "An agentic system that tracks, scores, and reflects on your daily progress. Uses LangChain for intelligent coaching and reflection.",
-    tags: ["Python", "FastAPI", "LangChain", "Next.js", "PostgreSQL"],
-    status: "LIVE",
-    github: "https://github.com/hrithik210/Ai-agentverse",
-    demo: "https://higher-me.vercel.app",
-    thumbnail: "/higherme.png"
-  },
-  {
-    id: "airnote",
-    title: "Airnote",
-    subtitle: "Real-time Communication",
-    headline: "Real-time messaging application",
-    description: "A real-time messaging app with instant synchronization. Built with Pusher for WebSocket communication and optimized for speed.",
-    tags: ["Next.js", "TypeScript", "Pusher", "PostgreSQL", "Prisma"],
-    status: "LIVE",
-    github: "https://github.com/hrithik210/messenger",
-    demo: "https://airnote-ebon.vercel.app/",
-    thumbnail: "/airnote.png"
-  },
-  {
-    id: "token-launchpad",
-    title: "Token Launchpad",
-    subtitle: "Web3 Infrastructure",
-    headline: "Platform for launching crypto tokens",
-    description: "Solana-based platform for launching and managing crypto tokens. Provides complete token deployment and management infrastructure.",
-    tags: ["Next.js", "Solana", "Web3.js", "TypeScript"],
-    status: "SHIPPED",
-    github: "https://github.com/hrithik210/token-launchpad",
-    demo: "https://token-launchpad-nine.vercel.app/",
-    thumbnail: "/token-launchpad.png"
-  },
-  {
-    id: "luvana",
-    title: "Luvana",
-    subtitle: "NFT Platform",
-    headline: "Personalized relationship NFTs",
-    description: "A Web3 dApp that allows users to mint personalized NFTs representing relationships, with on-chain metadata and dynamic SVG generation.",
-    tags: ["Next.js", "Solidity", "Ethers.js", "Web3"],
-    status: "SHIPPED",
-    github: "https://github.com/hrithik210/Luvana",
-    demo: "https://luvana.vercel.app",
-    thumbnail: "/luvana.png"
-  },
-  {
-    id: "medium-blog",
-    title: "Medium Clone",
-    subtitle: "Content Platform",
-    headline: "Full-featured blogging platform",
-    description: "A production-ready blogging platform with rich text editing, user authentication, and content management. Built for scale.",
-    tags: ["React", "TypeScript", "Node.js", "PostgreSQL", "Prisma"],
-    status: "SHIPPED",
-    github: "https://github.com/hrithik210/medium-blog",
-    demo: "https://medium-blog-blush-sigma.vercel.app/",
-    thumbnail: "/medium.png"
-  }
-];
-
-export const TICKER_HEADLINES = [
-  "BREAKING: 0xFLOW LAUNCHES NEW AI AGENT SWARM",
-  "UPDATE: MVP DELIVERY TIMES CUT BY 60%",
-  "INSIGHT: AUTOMATION IS THE NEW LEVERAGE",
-  "MARKET: DEMAND FOR FLUID INTELLIGENCE AT ALL-TIME HIGH",
-  "DEPLOYING: NEXT-GEN FULL STACK ARCHITECTURES",
-  "STATUS: SYSTEMS NOMINAL · READY FOR INTAKE",
-];
-
-export const FOUNDER_CONTENT = {
-  name: "Hrithik Nayak",
-  title: "Lead Architect & Founder",
-  quote: "We are entering the age of fluid software. The code we write today must be able to think for itself tomorrow.",
+export const SITE = {
+  name: "0xFLOW",
+  url: "https://oxflow.studio",
+  email: "hrithik@oxflow.studio",
+  // TODO: replace with the real Cal.com booking URL
+  calLink: "https://cal.com/CHANGEME",
+  ctaLabel: "Book a fit call",
   socials: [
     { label: "GitHub", href: "https://github.com/hrithik210" },
-    { label: "Twitter/X", href: "https://twitter.com" },
-    { label: "LinkedIn", href: "https://linkedin.com" },
-  ]
+    // TODO: replace with real profile URLs
+    { label: "LinkedIn", href: "https://linkedin.com/in/CHANGEME" },
+    { label: "X", href: "https://x.com/CHANGEME" },
+  ],
+};
+
+export const HERO = {
+  headline: "From validated idea to production, end to end.",
+  subheadline:
+    "0xFLOW is a founder-led studio. I scope, build, and ship your product, then keep it running in production.",
+  primaryCta: { label: SITE.ctaLabel, href: SITE.calLink },
+  secondaryCta: { label: "See the work", href: "#work" },
+};
+
+export const PROCESS = [
+  {
+    title: "Fit call",
+    description:
+      "Twenty minutes on what you're building. If I'm not the right person for it, I'll say so on the call.",
+  },
+  {
+    title: "Scope and milestones",
+    description:
+      "A fixed scope with milestone pricing before any code. You know what ships, when, and what it costs.",
+  },
+  {
+    title: "Build and hand off",
+    description:
+      "I build with regular demos, ship to production, and hand over something your team can actually run.",
+  },
+];
+
+export const SERVICES = [
+  {
+    title: "Product builds",
+    description:
+      "You have a validated idea and need it real. I take it from scope to a production V1: auth, payments, AI, and the unglamorous parts that make software dependable.",
+  },
+  {
+    title: "Internal software and AI tools",
+    description:
+      "Custom tools for established businesses. Software built around how your team actually works, with AI where it earns its place.",
+  },
+  {
+    title: "Workflow automation",
+    description:
+      "The busywork between your tools, automated. n8n or Zapier where that is enough, owned code where it is not.",
+  },
+];
+
+export type CaseStudy = {
+  slug: string;
+  title: string;
+  tagline: string;
+  summary: string;
+  thumbnail?: string;
+  status: string;
+  role: string;
+  timeline: string;
+  stack: string[];
+  liveUrl?: string;
+  sections: { heading: string; body: string[] }[];
+  outcomes: string[];
+};
+
+export const CASE_STUDIES: CaseStudy[] = [
+  {
+    slug: "creator-os",
+    title: "Creator OS",
+    tagline: "The financial back office for creators, run over text message.",
+    summary:
+      "As founding engineer for Everbloom, I took Creator OS from zero to production: an AI system that reads invoices, answers over SMS, and moves real money once the creator confirms.",
+    // TODO: add screenshot at public/work/creator-os.png, then set thumbnail: "/work/creator-os.png"
+    status: "In production",
+    role: "Founding engineer, freelance for Everbloom",
+    timeline: "2025 to present",
+    stack: ["Next.js", "TypeScript", "PostgreSQL", "Stripe", "Plaid", "Twilio", "Claude"],
+    sections: [
+      {
+        heading: "The problem",
+        body: [
+          "Creators run serious businesses out of a Gmail inbox. Brand-deal invoices arrive buried in email threads, payments live in a banking app, and nobody knows the real cash position on any given day.",
+          "Everbloom wanted a financial back office that works where creators already are: their text messages.",
+        ],
+      },
+      {
+        heading: "What I built",
+        body: [
+          "Creator OS watches a creator's inbox, reads incoming invoices with AI, and asks over SMS: studio rent invoice for $1,800, pay it? A plain-English reply pays it through Stripe.",
+          "It tracks outgoing invoices too, watches the bank feed through Plaid, and closes an invoice automatically when the matching deposit lands. The AI never moves money on its own; every payment waits for the creator's explicit confirmation.",
+        ],
+      },
+      {
+        heading: "How it shipped",
+        body: [
+          "I joined as the founding engineer and owned the build from the first commit: product decisions, data model, banking and payments integrations, the SMS agent, and the internal dashboard the Everbloom team operates from.",
+          "Along the way it replaced a pile of fragile no-code automations with owned, tested software.",
+        ],
+      },
+    ],
+    outcomes: [
+      "In production, with real creators moving real money",
+      "Inbox to paid invoice without leaving SMS",
+      "Automatic bank reconciliation for money in and money out",
+      "Replaced no-code duct tape with owned, tested software",
+    ],
+  },
+  {
+    slug: "astro-dadi",
+    title: "Astro Dadi",
+    tagline: "Vedic astrology with conversational depth.",
+    summary:
+      "My own consumer AI product, live at astrodadi.com: real Vedic birth charts computed from scratch, read to you by an AI astrologer that knows your chart.",
+    // TODO: add screenshot at public/work/astro-dadi.png, then set thumbnail: "/work/astro-dadi.png"
+    status: "Live",
+    role: "Founder and engineer",
+    timeline: "2026, live and operated",
+    stack: ["Next.js", "TypeScript", "PostgreSQL", "Swiss Ephemeris", "Razorpay", "AI SDK"],
+    liveUrl: "https://astrodadi.com",
+    sections: [
+      {
+        heading: "The problem",
+        body: [
+          "Most astrology apps generate the same twelve horoscopes for everyone. People who take Vedic astrology seriously want readings grounded in their actual birth chart, and until now the only way to get that was a personal astrologer.",
+        ],
+      },
+      {
+        heading: "What I built",
+        body: [
+          "Astro Dadi computes a real classical kundli from your birth date, time, and place, the same math a traditional astrologer works from.",
+          "Then you talk to Dadi, an AI astrologer that reads your specific chart: divisional charts, dasha timelines, yogas, and doshas, in English or Hinglish. Daily readings, detailed chart views, and paid subscription plans round out the product.",
+        ],
+      },
+      {
+        heading: "How it shipped",
+        body: [
+          "I built and run the entire product solo: the astrology computation engine, the AI conversation layer, subscriptions and billing, and the backend that also serves the native mobile app.",
+        ],
+      },
+    ],
+    outcomes: [
+      "Live at astrodadi.com with paid subscription plans",
+      "Chart math verified against established reference tables",
+      "One codebase serves the web app and the native mobile app",
+      "Built and operated end to end by one engineer",
+    ],
+  },
+];
+
+export const FOUNDER = {
+  name: "Hrithik Nayak",
+  title: "Founder, 0xFLOW",
+  // TODO: add headshot at public/hrithik.jpg
+  image: "/hrithik.jpg",
+  bio: "I'm an AI-first software engineer. As founding engineer for Everbloom I took Creator OS from zero to production, and I build and run Astro Dadi, my own live consumer AI product. 0xFLOW is how I do that for you: one engineer who owns the whole build, start to finish.",
+  socials: SITE.socials,
+};
+
+export const FINAL_CTA = {
+  headline: "Have something validated that needs building?",
+  body: "Twenty minutes. Bring what you're building, and I'll tell you honestly if I'm the right person for it.",
 };
