@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope, Outfit } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import SmoothScrollProvider from "./providers/SmoothScrollProvider";
 
@@ -16,11 +17,12 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "0xFLOW",
-  description: "Engineering velocity for the next generation of systems. MVP development, automations, and AI solutions.",
-  keywords: ["AI agency", "Intelligence", "Software Development", "MVP", "0xFLOW"],
+  metadataBase: new URL("https://oxflow.studio"),
+  title: "0xFLOW | Founder-led product studio",
+  description:
+    "0xFLOW takes products from validated idea to production, end to end: full-stack builds, AI systems, internal tools, and workflow automation.",
   openGraph: {
-    images: "/logo.png",
+    images: "/logo1.png",
   },
 };
 
@@ -33,12 +35,10 @@ export default function RootLayout({
     <html lang="en" className={`${manrope.variable} ${outfit.variable}`}>
       <body className="antialiased font-sans relative">
         <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
-            <div className="ambient-glow" style={{ top: '-10%', left: '-10%', opacity: 0.4 }}></div>
-            <div className="ambient-glow" style={{ bottom: '-10%', right: '-10%', opacity: 0.3, background: 'radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(5, 5, 5, 0) 70%)' }}></div>
+          <div className="ambient-glow" style={{ top: "-10%", left: "-10%", opacity: 0.25 }}></div>
         </div>
-        <SmoothScrollProvider>
-          {children}
-        </SmoothScrollProvider>
+        <SmoothScrollProvider>{children}</SmoothScrollProvider>
+        <Analytics />
       </body>
     </html>
   );
