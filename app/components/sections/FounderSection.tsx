@@ -1,47 +1,33 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { FOUNDER_CONTENT } from "@/app/data/content";
+import Image from "next/image";
+import { FOUNDER } from "@/app/data/content";
 
 export default function FounderSection() {
   return (
-    <section id="founder" className="py-24 px-6 relative">
-      <div className="max-w-4xl mx-auto text-center">
-        {/* Quote */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-12 glass-panel p-12 rounded-3xl"
-        >
-          <p className="text-2xl md:text-3xl font-bold leading-relaxed mb-8 text-white">
-            "{FOUNDER_CONTENT.quote}"
-          </p>
-          <div className="text-lg font-semibold text-blue-400">{FOUNDER_CONTENT.name}</div>
-          <div className="text-gray-400">{FOUNDER_CONTENT.title}</div>
-        </motion.div>
-
-        {/* Social Links */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex justify-center gap-6 mb-8"
-        >
-          {FOUNDER_CONTENT.socials.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 border border-white/20 rounded-full font-semibold text-white hover:bg-white hover:text-black transition-all"
-            >
-              {link.label}
-            </a>
-          ))}
-        </motion.div>
+    <section id="founder" className="px-6 py-12">
+      <div className="max-w-5xl mx-auto border-t border-white/10 pt-12">
+        <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-8 md:gap-12 items-center">
+          <div className="relative w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden bg-gray-900/50">
+            <Image src={FOUNDER.image} alt={FOUNDER.name} fill className="object-cover" />
+          </div>
+          <div>
+            <h2 className="text-2xl md:text-3xl font-black text-white">{FOUNDER.name}</h2>
+            <p className="text-blue-400 font-semibold mt-1">{FOUNDER.title}</p>
+            <p className="text-gray-400 leading-relaxed mt-5 max-w-[65ch]">{FOUNDER.bio}</p>
+            <div className="flex flex-wrap gap-6 mt-6">
+              {FOUNDER.socials.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold text-gray-300 hover:text-white transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
