@@ -1,17 +1,18 @@
-# 0xFLOW Agency
+# 0xFLOW
 
-> The Intelligence Age is Here.
+> Founder-led product studio. From validated idea to production, end to end.
 
-0xFLOW is a next-generation engineering agency bridging the gap between traditional software development and autonomous intelligence. We architect systems that think, learn, and evolve.
+0xFLOW is Hrithik Nayak's software studio. It takes products from a validated concept to a production-ready V1, and builds custom internal software, AI tools, and workflow automation for established businesses.
 
 ## Key Resources
 
-- [Full Website Content](https://0xflow.dev/llms-full.txt): A complete markdown representation of our landing page, including our manifesto, capabilities, and systems.
-- [Services](https://0xflow.dev/services): Detailed breakdown of our engineering and AI capabilities.
-- [Contact](mailto:hello@0xflow.dev): Get in touch to start a project.
+- [Full Website Content](https://oxflow.studio/llms-full.txt): A complete markdown representation of the site, including services, process, and case studies.
+- [Case Study: Creator OS](https://oxflow.studio/work/creator-os): The financial back office for creators, built as founding engineer for Everbloom.
+- [Case Study: Astro Dadi](https://oxflow.studio/work/astro-dadi): A live consumer AI product for Vedic astrology, built and operated solo.
+- [Contact](mailto:hrithik@oxflow.studio): Or book a fit call from the website.
 
-## Core Capabilities
+## Services
 
-- **Integration**: Injecting cognitive perception into existing stacks.
-- **Velocity**: Engineering high-velocity prototypes that feel finished from Day One.
-- **Automation**: Architecting self-healing workflows that operate 24/7.
+- **Product builds**: Validated concept to production V1, including auth, payments, and AI.
+- **Internal software and AI tools**: Custom tools for established businesses.
+- **Workflow automation**: n8n or Zapier where that is enough, owned code where it is not.

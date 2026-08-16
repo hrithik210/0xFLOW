@@ -6,4 +6,4 @@ Allow: /llms-full.txt
 Allow: /llms.txt
 
 # Sitemap
-# Sitemap: https://0xflow.dev/sitemap.xml
+Sitemap: https://oxflow.studio/sitemap.xml
