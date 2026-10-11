@@ -1,0 +1,3 @@
+PASS: 15 logo SVGs contain no text or raster images.
+PASS: 15 PNGs have visible artwork and transparent padding.
+PASS: favicon PNGs rendered at 16, 24, 32, 48 pixels.
